@@ -14,9 +14,16 @@ body{
 .container{
     margin: 0;
     padding: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
 }
+
+/* @media (max-width: 768px) {
+    .container{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+} */
 
 /*Navbar css*/
 .navbar {
@@ -24,13 +31,16 @@ body{
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0; /* Required for sticky to work */
-    width: 100%; /* Ensure full width */
-    z-index: 1000; /* Keep it above other elements */
-    padding: 15px 20px;
-    background-color: #0c0e207e;
-    font-family: poppins;
+    top: 0;
+    width: 100vw; /* Ensures it spans the full viewport width */
+    z-index: 1000;
+    margin: 0;
+    padding: 10px 20px; /* Add some padding to prevent content from touching edges */
+    background-color: #0C0E20;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box; /* Prevents unwanted extra spacing */
 }
+
 
 .logo img{
     width: 120px;
@@ -45,6 +55,7 @@ body{
 }
 .lists li{
     padding: 0 15px;
+    
 }
 .lists a{
     color: white;
@@ -69,7 +80,10 @@ body{
         display: flex;
         cursor: pointer;
         z-index: 1001;
+        margin-right: 15px;
+        color: white;
     }
+
 
     /* Hide close icon initially */
     #close-icon {
@@ -118,6 +132,8 @@ body{
 
 /*About Section Css*/
 .about{
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     gap: 100px;
