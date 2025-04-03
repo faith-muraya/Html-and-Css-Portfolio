@@ -111,12 +111,12 @@ body{
     }
 
     .lists li {
-        padding: 20px 0;
+        padding: 15px 0;
         width: 100%;
         font-size: 1.5rem;
     }
     .lists a {
-      
+      font-family: poppins;
         font-size: 1.2rem;
     }
 
