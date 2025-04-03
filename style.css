@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Kalnia:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+html {
+    scroll-behavior: smooth;
+  }
 body{
     margin: 0;
     padding: 0;
@@ -71,7 +73,7 @@ body{
         right: -100%;
         width: 70%;
         height: 100vh;
-        background-color: #0C0E20;
+        background-color: blue;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
         display: flex;
@@ -92,14 +94,14 @@ body{
     .lists li {
         padding: 15px 0;
         width: 100%;
-        text-align: center;
+       
     }
     
     .close-btn {
         display: block;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 25px;
+        right: -80px;
     }
     
     .container {
@@ -133,7 +135,7 @@ h1, h2 {
 }
 .about-section p{
     font-size: 1.2rem;
-    text-align: justify;
+    text-align: left;
 }
 .about-image img{
     width: 600px;
@@ -162,6 +164,33 @@ button:hover{
 a{
    margin-right: 20px;
 }
+
+@media screen and (max-width: 1024px) {
+    .about {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 30px;
+    }
+    
+    .about-section h1 {
+        font-size: 2.5rem; /* Adjust for tablets */
+    }
+
+    .about-section h2{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .about-section p {
+        font-size: 1.2rem;
+    }
+
+    .about-image img {
+        max-width: 450px;
+        height: 450px;
+        border-radius: 10px;
+    }
+}
+
 
 /* Education Section CSS */
 .education-section {
@@ -384,48 +413,53 @@ a{
     text-align: center;
     padding: 50px 10%;
     margin-top: 50px;
+    margin-left: -40px;
 }
 
 .project h1 {
     color: #7BF9FF;
     text-shadow: 0px 0px 10px #7BF9FF;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
+
 .diffprojects {
-    display: flex;
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
-    flex-wrap: wrap; 
 }
+
 .projects {
     background-color: #151830;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    width: 100%; 
-    max-width: 45%; 
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     position: relative;
 }
+
 .projects:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
+
 .project-img {
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
 }
+
 .project-img img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
+
 .project-img:hover img {
     transform: scale(1.1);
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -449,30 +483,38 @@ a{
 .overlay svg:hover {
     transform: scale(1.2);
 }
+
 .project-img:hover .overlay {
     opacity: 1;
 }
+
 .projects h2 {
     margin-top: 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #7BF9FF;
 }
+
 .projects p {
     font-size: 1rem;
     color: #ddd;
     padding: 0 15px;
     line-height: 1.6;
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 768px) {
+    .project h1 {
+        font-size: 2rem;
+    }
+    
     .diffprojects {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .projects {
-        width: 100%; 
+        width: 100%;
     }
 }
+
 
 /* Contact */
 .contact {
@@ -486,17 +528,20 @@ a{
     text-align: center;
     margin-bottom: 100px;
 }
+
 .contact-form {
     display: flex;
     justify-content: space-between;
-    gap: 50px; 
+    gap: 50px;
 }
+
 .contact-image img {
     width: 500px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 .form {
     flex: 1;
     max-width: 500px;
@@ -522,8 +567,7 @@ a{
 form input,
 form textarea,
 .btn {
-    width: calc(100% - 30px); 
-    max-width: 100%;
+    width: 100%;
     padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -531,31 +575,69 @@ form textarea,
     font-size: 1.2rem;
     font-family: Poppins, sans-serif;
     color: black;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 form textarea {
     height: 100px;
     resize: none;
 }
+
 .btn {
     background: #7BF9FF;
     cursor: pointer;
     font-weight: bold;
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .contact {
+        padding: 5%;
+    }
+
+    .contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
     .contact-form {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        gap: 20px;
     }
 
     .contact-image img {
-        width: 250px;
-        height: auto;
+        width: 100%;
+        max-width: 500px;
     }
 
     .form {
         width: 100%;
+        max-width: 90%;
     }
 }
+
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 2rem;
+    }
+
+    .form h2 {
+        font-size: 1.8rem;
+    }
+
+    .form p {
+        font-size: 1rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
 

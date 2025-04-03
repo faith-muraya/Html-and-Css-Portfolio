@@ -1,15 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-    const closeBtn = document.getElementById("close-btn");
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const closeBtn = document.getElementById('closeBtn');
+    const navMenu = document.getElementById('navMenu');
 
-    // Open menu
-    menuToggle.addEventListener("click", function () {
-        navMenu.classList.add("open");
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.add('active');
     });
 
-    // Close menu
-    closeBtn.addEventListener("click", function () {
-        navMenu.classList.remove("open");
+    closeBtn.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.lists a').forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+        });
     });
 });
