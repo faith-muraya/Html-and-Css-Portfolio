@@ -107,12 +107,17 @@ body{
         flex-direction: column;
         width: 100%;
         padding: 20px;
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     .lists li {
         padding: 20px 0;
         width: 100%;
+        font-size: 1.5rem;
+    }
+    .lists a {
+      
+        font-size: 1.2rem;
     }
 
     /* When checkbox is checked, show menu */
