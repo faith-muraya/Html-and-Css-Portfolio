@@ -19,15 +19,19 @@ body{
 }
 
 /*Navbar css*/
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    padding: 15px 0;
-    font-family: "Poppins", sans-serif;
+    top: 0; /* Required for sticky to work */
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* Keep it above other elements */
+    padding: 15px 20px;
     background-color: #0c0e207e;
+    font-family: poppins;
 }
+
 .logo img{
     width: 120px;
     height: 80px;
@@ -51,64 +55,66 @@ body{
 .lists a:hover {
     color: #ccc;
 }
-.menu-toggle {
+/* Hide the checkbox */
+.menu-checkbox {
     display: none;
-    cursor: pointer;
 }
-.close-btn {
+.menu-toggle{
     display: none;
-    cursor: pointer;
 }
 
-/* Mobile menu styles */
+/* Mobile styles */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: flex;
+        cursor: pointer;
         z-index: 1001;
     }
-    
+
+    /* Hide close icon initially */
+    #close-icon {
+        display: none;
+    }
+
+    /* Menu styles */
     .lists {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 60%;
         height: 100vh;
-        background-color: blue;
+        background-color: #151830;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
         display: flex;
-        align-items: center;
-        justify-content: center;
+      
     }
-    
-    .lists:target {
-        right: 0;
-    }
-    
     .lists ul {
         flex-direction: column;
         width: 100%;
         padding: 20px;
+        margin-top: 150px;
     }
-    
+
     .lists li {
-        padding: 15px 0;
+        padding: 20px 0;
         width: 100%;
-       
     }
-    
-    .close-btn {
+
+    /* When checkbox is checked, show menu */
+    .menu-checkbox:checked ~ .lists {
+        right: 0;
+    }
+
+    /* Show close icon and hide menu icon when menu is open */
+    .menu-checkbox:checked ~ .menu-toggle #menu-icon {
+        display: none;
+    }
+    .menu-checkbox:checked ~ .menu-toggle #close-icon {
         display: block;
-        position: absolute;
-        top: 25px;
-        right: -80px;
-    }
-    
-    .container {
-        margin-left: 15px;
-        margin-right: 15px;
     }
 }
+
 
 /*About Section Css*/
 .about{
