@@ -549,12 +549,25 @@ a{
     gap: 50px;
 }
 
-.contact-image img {
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+.contact-details{
+    color: white;
+    font-family: poppins;
 }
+
+.contact-details h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-details p{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
 
 .form {
     flex: 1;
@@ -563,19 +576,6 @@ a{
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     font-family: poppins;
-}
-
-.form h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.form p {
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 20px;
 }
 
 form input,
@@ -626,7 +626,7 @@ form textarea {
 
     .form {
         width: 100%;
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -635,11 +635,11 @@ form textarea {
         font-size: 2rem;
     }
 
-    .form h2 {
+    .contact-details h2 {
         font-size: 1.8rem;
     }
 
-    .form p {
+    .contact-details p {
         font-size: 1rem;
     }
 
