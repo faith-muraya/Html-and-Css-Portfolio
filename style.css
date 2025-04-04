@@ -17,17 +17,8 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
-
-/* @media (max-width: 768px) {
-    .container{
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-} */
-
-/*Navbar css*/
 .navbar {
-    position: fixed; /* Fixes navbar at the top */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
@@ -67,7 +58,7 @@ body{
 .lists a:hover {
     color: #ccc;
 }
-/* Hide the checkbox */
+
 .menu-checkbox {
     display: none;
 }
@@ -75,7 +66,6 @@ body{
     display: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -84,13 +74,9 @@ body{
         color: white;
     }
 
-
-    /* Hide close icon initially */
     #close-icon {
         display: none;
     }
-
-    /* Menu styles */
     .lists {
         position: fixed;
         top: 0;
@@ -120,12 +106,10 @@ body{
         font-size: 1.2rem;
     }
 
-    /* When checkbox is checked, show menu */
     .menu-checkbox:checked ~ .lists {
         right: 0;
     }
 
-    /* Show close icon and hide menu icon when menu is open */
     .menu-checkbox:checked ~ .menu-toggle #menu-icon {
         display: none;
     }
@@ -146,8 +130,8 @@ body{
     margin-top: 140px;
 }
 h1, h2 {
-    margin: -5px;  /* Removes any default margin */
-    padding: -5px; /* Optional: removes any padding */
+    margin: -5px;  
+    padding: -5px; 
 }
 .about-section h2{
     font-size: 2rem;
@@ -164,7 +148,7 @@ h1, h2 {
     text-align: left;
 }
 .about-image img{
-    width: 100%;
+    width: 600px;
     height: auto;
     border-radius: 10px;
     background-size: cover;
@@ -194,13 +178,13 @@ a{
 
 @media screen and (max-width: 1024px) {
     .about {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; 
         gap: 30px;
         margin-top: 120px;;
     }
     
     .about-section h1 {
-        font-size: 2.5rem; /* Adjust for tablets */
+        font-size: 2.5rem; 
     }
 
     .about-section h2{
@@ -215,7 +199,8 @@ a{
     .about-image img {
         max-width: 450px;
         height: 450px;
-        border-radius: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
     }
 }
 
