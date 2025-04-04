@@ -10,6 +10,7 @@ body{
     box-sizing: border-box;
     background-color: #0C0E20;
     overflow-x: hidden;
+    overflow-x: hidden;
 }
 .container{
     margin: 0;
@@ -31,9 +32,6 @@ body{
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
-
-
-
 .logo img{
     width: 120px;
     height: 80px;
